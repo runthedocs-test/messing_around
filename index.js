@@ -6,14 +6,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Health check endpoint
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Hello from the Risk Rule Engine!',
-        status: 'active',
-        timestamp: new Date().toISOString()
-    });
-});
 
 // API endpoint
 app.get('/api/status', (req, res) => {
